@@ -1,13 +1,13 @@
 # DrNIng-Team5-Project
 Data Mining Project for DATS 6103
-### DATS 6103 Team Project Guide (Simple & Clear Collaboration)
+### DATS 6103 Team Project Guide
 
 #### 🔍 **Overview**
 This project involves cleaning and analyzing a dataset (minimum: 4,000 rows, 8+ columns) using Python. The process includes EDA, model building, presentation, and a final report. **Collaboration is done via GitHub, Google Drive, and Notion.**
 
 ---
 
-## ✅ **Project Deadlines & Tasks**
+##  **Project Deadlines & Tasks**
 | Task                  | Description                            | Due Date              | Grade Type       |
 |-----------------------|----------------------------------------|-----------------------|------------------|
 | Topic Proposal        | Submit research topic, SMART questions, dataset source, GitHub repo link, proposed modeling methods. | March 26             | Team Grade (4 pts)|

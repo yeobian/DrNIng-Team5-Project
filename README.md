@@ -7,7 +7,7 @@ This project involves cleaning and analyzing a dataset (minimum: 4,000 rows, 8+ 
 📂 **Collaboration Links (Easy Access)**  
 - 📋 [Google Docs (Topic Proposal)](https://docs.google.com/document/d/1Gi-vhqmPNqfE1nJQGsywApNE7gXgoZnenhc0vEQh77I/edit?usp=sharing)  
 - 📄 [Google Slides (Presentation)](https://docs.google.com/presentation/d/1nG1CfKmA0BDDYCVTSVrcctgdW9TENTTGFHUi0JE7yg0/edit?usp=sharing)  
-- 😊 [It will be great if we can use discussion board for communications](https://github.com/yeobian/DrNIng-Team5-Project/edit/main/README.md#:~:text=Pull%20requests-,Discussions,-Actions)
+- 😊 [It will be great if we can use discussion board for communications](https://github.com/yeobian/DrNIng-Team5-Project/discussions)
 ---
 ##  **Project Deadlines & Tasks**
 | Task                  | Description                            | Due Date              | Grade Type       |

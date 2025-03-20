@@ -4,9 +4,11 @@ Data Mining Project for DATS 6103
 
 #### 🔍 **Overview**
 This project involves cleaning and analyzing a dataset (minimum: 4,000 rows, 8+ columns) using Python. The process includes EDA, model building, presentation, and a final report. **Collaboration is done via GitHub, Google Drive, and Notion.**
+📂 **Collaboration Links (Easy Access)**  
+- 📋 [Google Docs (Topic Proposal)](https://docs.google.com/document/d/1Gi-vhqmPNqfE1nJQGsywApNE7gXgoZnenhc0vEQh77I/edit?usp=sharing)  
+- 📄 [Google Slides (Presentation)](https://docs.google.com/presentation/d/1nG1CfKmA0BDDYCVTSVrcctgdW9TENTTGFHUi0JE7yg0/edit?usp=sharing)  
 
 ---
-
 ##  **Project Deadlines & Tasks**
 | Task                  | Description                            | Due Date              | Grade Type       |
 |-----------------------|----------------------------------------|-----------------------|------------------|

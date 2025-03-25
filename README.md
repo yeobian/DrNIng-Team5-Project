@@ -13,7 +13,7 @@ This project involves cleaning and analyzing a dataset (minimum: 4,000 rows, 8+ 
 | Task                  | Description                            | Due Date              | Grade Type       |
 |-----------------------|----------------------------------------|-----------------------|------------------|
 | Topic Proposal Discussion Board Submission | Deadline for posting topic proposal on the discussion board. | March 24, 2025 11:55pm       | None             |
-| Vote Deadline         | Deadline for voting on topic proposals. | March 25, 2025, 11 AM  | None             |
+| Vote Deadline         | Deadline for voting on topic proposals. | March 25, 2025, 9 pm  | None             |
 | Topic Proposal        | Submit research topic, SMART questions, dataset source, GitHub repo link, proposed modeling methods. | March 26             | Team Grade (4 pts)|
 | Presentation Slides   | Prepare clear slides with visuals and minimal text.         | April 23             | Team/Individual (12 pts)|
 | Presentation          | 15-minute presentation. All members present. | April 23 (Section 10) / April 24 (Section 11) | Individual (24 pts)|

@@ -38,6 +38,8 @@ sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=Tru
 plt.title("Correlation Heatmap")
 plt.show()
 
+# %%
+df = df.drop(columns=["Life expectancy at birth, female (years)", "Life expectancy at birth, male (years)"])
 #%%
 label_encoder = LabelEncoder()
 df['country'] = label_encoder.fit_transform(df['country'])
@@ -125,7 +127,7 @@ plt.title("R-squared (R2) Scores by Model", fontsize=16)
 plt.xlabel("Model", fontsize=12)
 plt.ylabel("R-squared (R2)", fontsize=12)
 
-plt.ylim(0.999, 1.0)
+plt.ylim(0.7, 0.9)
 
 for index, row in results_df.iterrows():
     plt.text(index, row["R-squared (R2)"], 
@@ -155,4 +157,28 @@ plt.xticks(rotation=45)
 # Show the plot
 plt.tight_layout()
 plt.show()
+# %%
+# Feature importance from Random Forest Regressor
+feature_importances = rf_model.feature_importances_
+
+# Create a DataFrame for better visualization
+importance_df = pd.DataFrame({
+    'Feature': X_train.columns,
+    'Importance': feature_importances
+}).sort_values(by='Importance', ascending=False)
+
+# Display the feature importance
+print(importance_df)
+
+# Plot the feature importance
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Importance', y='Feature', data=importance_df, palette="viridis")
+
+plt.title("Feature Importance from Random Forest Regressor", fontsize=16)
+plt.xlabel("Importance", fontsize=12)
+plt.ylabel("Feature", fontsize=12)
+
+plt.tight_layout()
+plt.show()
+
 # %%

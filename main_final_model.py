@@ -181,4 +181,73 @@ plt.ylabel("Feature", fontsize=12)
 plt.tight_layout()
 plt.show()
 
+
+# %%
+# =========================
+# Time Series Modeling: ARIMA and SARIMAX
+# =========================
+
+print("\n--- Time Series Modeling (ARIMA/SARIMAX) ---")
+# %%
+# Create a country-level average time series
+ts_df = df.groupby('year')['Life expectancy at birth, total (years)'].mean().reset_index()
+ts_df.columns = ['year', 'life_expectancy']
+
+# Set index to year for time series
+ts_df.set_index('year', inplace=True)
+# %%
+# Plot the time series
+plt.figure(figsize=(10, 5))
+plt.plot(ts_df, marker='o', linestyle='-')
+plt.title("Average Global Life Expectancy Over Time")
+plt.ylabel("Life Expectancy")
+plt.xlabel("Year")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# =========================
+# ARIMA Model
+# =========================
+# %%
+arima_model = ARIMA(ts_df, order=(1, 1, 1))  # ARIMA(p,d,q)
+arima_result = arima_model.fit()
+
+# Forecast the next 5 years
+arima_forecast = arima_result.forecast(steps=5)
+print("ARIMA Forecast (next 5 years):")
+print(arima_forecast)
+# %%
+# Plot forecast
+plt.figure(figsize=(10, 5))
+plt.plot(ts_df, label="Observed")
+plt.plot(range(ts_df.index[-1] + 1, ts_df.index[-1] + 6), arima_forecast, label="Forecast", marker='o')
+plt.title("ARIMA Forecast for Global Life Expectancy")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# =========================
+# SARIMAX Model
+# =========================
+# %%
+sarimax_model = SARIMAX(ts_df, order=(1, 1, 1), seasonal_order=(0, 1, 1, 4))
+sarimax_result = sarimax_model.fit(disp=False)
+
+# Forecast next 5 years
+sarimax_forecast = sarimax_result.forecast(steps=5)
+print("SARIMAX Forecast (next 5 years):")
+print(sarimax_forecast)
+# %%
+# Plot SARIMAX forecast
+plt.figure(figsize=(10, 5))
+plt.plot(ts_df, label="Observed")
+plt.plot(range(ts_df.index[-1] + 1, ts_df.index[-1] + 6), sarimax_forecast, label="SARIMAX Forecast", marker='x')
+plt.title("SARIMAX Forecast for Global Life Expectancy")
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
 # %%

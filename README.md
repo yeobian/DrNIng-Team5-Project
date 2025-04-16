@@ -19,13 +19,13 @@ This project involves cleaning and analyzing a dataset (minimum: 4,000 rows, 8+ 
 
 | 📅 Date       | 👤 Task Owner          | 🛠️ Task Description                                                                 | ⏰ Deadline                        | ✅ Goal                                                  |
 |--------------|------------------------|--------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------------------|
-| **Apr 10**   | Yeobi             | Finish data cleaning, set up GitHub structure, and start report & slide framework   | Submit by **11:59 PM**            | `data_cleaning.py` complete + repo + slide template ready |
+| **Apr 10**   | Yeobi             | Finish data cleaning, set up GitHub structure, and start report & slide framework   | Submit by **11:59 PM**   ✅         | `data_cleaning.py` complete + repo + slide template ready |
 | **Apr 12**   | Ella               | Submit EDA visuals (histograms, heatmap, etc.)                                      | Submit by **11:59 PM**            | `eda_visuals.py` committed to Git                         |
 | **Apr 14**   | Siddardha+Sameer              | Submit Multiple Linear Regression model + result analysis                           | Submit by **11:59 PM**            | `modeling_mlr.py` committed to Git                        |
 | **Apr 14**   | Siddardha+Sameer              | Submit Decision Tree + Random Forest models + feature importance plot               | Submit by **11:59 PM**            | `modeling_tree_rf.py` committed to Git                    |
 | **Apr 14**   | Siddardha+Sameer    | Finalize and integrate all code in `main_final_model.py`                            | Start by **Apr 14 @ 9 PM** <br> Finish before **Apr 15 noon** | Final `.py` script that runs end-to-end                  |
-| **Apr 15**   | Yeobi                   | Create full slide deck using all results + finalize intro/SWOT/SMART Qs in report   | Finish by **9 PM**                | Full team slide deck + first draft of report body         |
-| **Apr 16**   | Everyone               | Add individual slides + write short speaking scripts <br>🎨 Member D: polish visuals | All due by **9 PM**               | Final polished presentation and scripts ready to rehearse |
+| **Apr 15**   | Yeobi                   | Create full slide deck using all results+Time Series Modeling  | Finish by **9 PM**   ✅             | Full team slide deck + first draft of report body         |
+| **Apr 16**   | Everyone               | Add individual slides + write short speaking scripts <br>🎨 Member Ella: polish visuals | All due by **9 PM**               | Final polished presentation and scripts ready to rehearse |
 | **Apr 21**   | Everyone               | ⏱️ In-person team practice session (GWU campus)                                      | Meet at **5 PM** for 1–2 hrs      | Practice delivery + flow of slides and timing             |
 
 ---

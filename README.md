@@ -9,7 +9,7 @@ This project involves cleaning and analyzing a dataset (minimum: 4,000 rows, 8+ 
 📂 **Collaboration Links (Easy Access)**  
 - 📋 [Google Docs (Topic Proposal)](https://docs.google.com/document/d/1Gi-vhqmPNqfE1nJQGsywApNE7gXgoZnenhc0vEQh77I/edit?usp=sharing)  
 - 📄 [Google Slides (Presentation)](https://docs.google.com/presentation/d/1nG1CfKmA0BDDYCVTSVrcctgdW9TENTTGFHUi0JE7yg0/edit?usp=sharing)
-- Canva https://www.canva.com/brand/join?token=Ettdd90owrhVI680OIh28g&referrer=team-invite
+- Canva https://www.canva.com/design/DAGlSKTumfs/Vn9Q-pkcmwscPx6heIvh1A/edit?utm_content=DAGlSKTumfs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 - 😊 [Discussion Board for Communication](https://github.com/yeobian/DrNIng-Team5-Project/discussions)
 ---
 

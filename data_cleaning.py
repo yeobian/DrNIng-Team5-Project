@@ -51,6 +51,9 @@ imp_columns = ["country", "year",
           ]
 df = df[imp_columns]
 
+
+#%%
+len(df.columns)
 #%%
 df.info()
 

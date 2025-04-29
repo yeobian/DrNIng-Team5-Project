@@ -288,39 +288,24 @@ def run_eda(df):
     plt.title("Correlation Heatmap")
     plt.show()
 
-run_eda
-
 #%%
 # Data Loading and Overview
 data_path = "cleaned_data.csv"
 df = pd.read_csv(data_path)
 
 #%%
-# EDA for Life Expectancy Dataset
-# 
-# This script loads and cleans the data, runs descriptive statistics,
-# and creates various visualizations for univariate, bivariate, and 
-# multivariate analysis. It also demonstrates how to perform a simple 
-# statistical test (t-test) as part of significance testing.
-
-# Set visual style
-sns.set(style="whitegrid")
-plt.rcParams['figure.figsize'] = (10, 6)
-
-
-# Display first few rows, structure and summary statistics
 print("Data Head:")
 print(df.head(), "\n")
 
+#%%
 print("Data Info:")
-print(df.info(), "\n")
+df.info()
 
-print("Descriptive Statistics:")
-print(df.describe(), "\n")
+#%%
+df.describe()
 
-# Check for missing values
-print("Missing Values by Column:")
-print(df.isnull().sum(), "\n")
+#%%
+df.isnull().sum()
 
 
 #%%
@@ -487,8 +472,6 @@ Purpose: Run full pipeline: cleaning, EDA, and modeling.
 """
 
 #%%
-import pandas as pd
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
@@ -503,23 +486,6 @@ from sklearn.metrics import mean_squared_error
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from sklearn.preprocessing import MinMaxScaler
 
-# %%
-df = pd.read_csv('cleaned_data.csv')
-df
-
-# %%
-df.info()
-
-# %%
-df.describe()
-
-# %%
-# Check missing values
-plt.figure(figsize=(10, 4))
-sns.heatmap(df.isnull(), cbar=False, cmap='viridis')
-plt.title("Missing Values Heatmap")
-plt.tight_layout()
-plt.show()
 
 # %%
 numeric_df = df.select_dtypes(include=[np.number])
@@ -531,10 +497,6 @@ sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", cbar=Tru
 plt.title("Correlation Heatmap")
 plt.tight_layout()
 plt.show()
-
-# =========================
-# New EDA Plots
-# =========================
 
 # %%
 # Distribution of life expectancy
@@ -654,21 +616,6 @@ print("Bayesian Ridge Regressor - Mean Squared Error (MSE):", mse_br)
 print("Bayesian Ridge Regressor - R-squared (R2):", r2_br)
 
 #%%
-from sklearn.neighbors import KNeighborsRegressor
-
-knn_model = KNeighborsRegressor(n_neighbors=7)
-
-knn_model.fit(X_train, y_train)
-
-y_pred_knn = knn_model.predict(X_test)
-
-# Evaluate
-mse_knn = mean_squared_error(y_test, y_pred_knn)
-r2_knn = r2_score(y_test, y_pred_knn)
-
-# Display the results in the same format
-print("KNN Regressor - Mean Squared Error (MSE):", mse_knn)
-print("KNN Regressor - R-squared (R2):", r2_knn)
 
 # %%
 # Import missing numpy module due to environment reset
@@ -676,9 +623,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Prepare the existing performance results including KNN
-model_names = ["Random Forest", "Decision Tree", "Bayesian Ridge", "KNN Regressor"]
-rmse_values = [0.862, 1.326, 1.853, np.sqrt(0.551)]  # KNN RMSE from MSE
-r2_values = [0.991, 0.980, 0.961, 0.994]
+model_names = ["Random Forest", "Decision Tree", "Bayesian Ridge"]
+rmse_values = [mse_rfr, mse_dt, mse_br]  # KNN RMSE from MSE
+r2_values = [r2_rfr, r2_dt, r2_br]
 
 # Plotting RMSE and R² comparison
 fig, axs = plt.subplots(1, 2, figsize=(12, 5))
@@ -693,7 +640,7 @@ axs[0].set_ylim(0, max(rmse_values) + 0.5)
 axs[1].bar(model_names, r2_values, color='mediumseagreen')
 axs[1].set_title("R² of Regression Models")
 axs[1].set_ylabel("R² Score")
-axs[1].set_ylim(0.9, 1.01)
+# axs[1].set_ylim(0.9, 1.01)
 
 plt.tight_layout()
 plt.show()
@@ -723,15 +670,12 @@ plt.tight_layout()
 plt.show()
 
 
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+#%%
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from prophet import Prophet
+from sklearn.metrics import mean_absolute_error
 
 # ========= Preprocessing =========
 # Group by year to create a time series
@@ -749,7 +693,6 @@ def evaluate_model(true, pred, model_name="Model"):
     print(f"MAE : {mae:.4f}")
     print(f"RMSE: {rmse:.4f}")
     print(f"MAPE: {mape:.2f}%")
-    print(f"R²  : {r2:.4f}")
 
 # ========= ARIMA =========
 print("\n--- ARIMA ---")

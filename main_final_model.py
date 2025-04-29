@@ -71,6 +71,8 @@ print("X_train shape:", X_train.shape)
 print("X_test shape:", X_test.shape)
 print("y_train shape:", y_train.shape)
 print("y_test shape:", y_test.shape)
+
+
 # %%
 rf_model = RandomForestRegressor(random_state=42)
 
@@ -118,7 +120,7 @@ results = {
 
 results_df = pd.DataFrame(results)
 
-print(results_df)
+results_df
 # %%
 plt.figure(figsize=(8, 6))
 sns.barplot(x="Model", y="R-squared (R2)", data=results_df, palette="viridis")

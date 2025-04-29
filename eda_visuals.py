@@ -30,7 +30,7 @@ run_eda
 
 #%%
 # Data Loading and Overview
-data_path = "/DrNIng-Team5-Project/cleaned_data.csv"
+data_path = "cleaned_data.csv"
 df = pd.read_csv(data_path)
 
 #%%
@@ -212,3 +212,4 @@ pca_df['Cluster'] = km.labels_
 sns.scatterplot(x='PC1', y='PC2', hue='Cluster', palette='tab10', data=pca_df)
 plt.title(f"KMeans (k={k}) on PCA space")
 plt.show()
+# %%
